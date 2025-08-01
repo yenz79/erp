@@ -1,0 +1,58 @@
+[debug] [2025-08-01T09:51:16.465Z] ----------------------------------------------------------------------
+[debug] [2025-08-01T09:51:16.467Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ekod\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js init dataconnect
+[debug] [2025-08-01T09:51:16.467Z] CLI Version:   14.11.2
+[debug] [2025-08-01T09:51:16.467Z] Platform:      win32
+[debug] [2025-08-01T09:51:16.468Z] Node Version:  v22.17.1
+[debug] [2025-08-01T09:51:16.468Z] Time:          Fri Aug 01 2025 17:51:16 GMT+0800 (Waktu Indonesia Tengah)
+[debug] [2025-08-01T09:51:16.468Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-01T09:51:16.469Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-08-01T09:51:16.504Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-01T09:51:16.504Z] > authorizing via signed-in user (akangjitu@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\xampp\htdocs\erp
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2025-08-01T09:51:17.100Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-08-01T09:51:17.101Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-08-01T09:52:22.186Z] Checked if tokens are valid: false, expires at: 1754036614790
+[debug] [2025-08-01T09:52:22.187Z] Checked if tokens are valid: false, expires at: 1754036614790
+[debug] [2025-08-01T09:52:22.187Z] > refreshing access token with scopes: []
+[debug] [2025-08-01T09:52:22.188Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-08-01T09:52:22.188Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-01T09:52:22.374Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-08-01T09:52:22.374Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-01T09:52:22.379Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-08-01T09:52:22.379Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"yenz_erp"}
+[debug] [2025-08-01T09:52:22.721Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-08-01T09:52:22.721Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-08-01T09:52:22.722Z] Couldn't check if project ID yenz_erp is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-08-01T09:52:47.118Z] Checked if tokens are valid: true, expires at: 1754045541374
+[debug] [2025-08-01T09:52:47.118Z] Checked if tokens are valid: true, expires at: 1754045541374
+[debug] [2025-08-01T09:52:47.118Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-08-01T09:52:47.118Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"yenz_erp","name":"yenz_erp"}
+[debug] [2025-08-01T09:52:58.208Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects, {"headers":{},"method":"POST","signal":{},"body":"{\"projectId\":\"yenz_erp\",\"name\":\"yenz_erp\"}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects failed, reason: getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2025-08-01T09:52:58.210Z] FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects
+    at RetryOperation._fn (C:\Users\Ekod\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\apiv2.js:261:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

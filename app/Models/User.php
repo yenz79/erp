@@ -18,6 +18,12 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
+    // Relasi ke Store
+    public function store()
+    {
+        return $this->belongsTo(Store::class);
+    }
+
     // Relasi ke Attendance
     public function attendances()
     {
@@ -63,6 +69,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_id',
+        'store_id',
+        'phone',
+        'skin_preference',
     ];
 
     /**
